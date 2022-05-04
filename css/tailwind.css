@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .title {
+    @apply text-[2.8rem] text-[color:var(--primary)] font-bold mb-2 tracking-wider;
+  }
+  .date {
+    @apply text-gray-400 italic text-[1.4rem] mb-4;
+  }
+  .description {
+    @apply text-[1.4rem] text-[color:var(--dark)] tracking-wide;
+  }
+}
+:root {
+  --primary: rgb(63, 252, 85);
+  --light: #efe;
+  --dark: #333;
+}
+.dark-mode {
+  --primary: rgb(131, 255, 145);
+  --light: #333;
+  --dark: #fff;
+}
+[class*="bg"],
+[class*="text"] {
+  transition: 0.5s;
+  transition-property: color, background-color;
+}
